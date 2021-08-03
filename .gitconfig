@@ -1,0 +1,8 @@
+[user]
+	name = erstinn
+	mail = 63952391+erstinn@users.noreply.github.com
+	email = 63952391+erstinn@users.noreply.github.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vim

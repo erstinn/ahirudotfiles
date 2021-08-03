@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/ahiru/.git'
 let g:netrw_dirhist_1='/home/ahiru/.vscode/extensions'
 let g:netrw_dirhist_0='/home/ahiru/.vscode'
 let g:netrw_dirhist_9='/home/ahiru/.config/xfce4'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_6='/home/ahiru/.config'
 let g:netrw_dirhist_5='/home/ahiru/.config/messenger-nativefier-7ab88e'
 let g:netrw_dirhist_4='/home/ahiru/.config'
 let g:netrw_dirhist_3='/boot'
-let g:netrw_dirhist_2='/sys'
