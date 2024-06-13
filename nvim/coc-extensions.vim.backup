@@ -1,0 +1,32 @@
+let g:coc_global_extensions = [
+    " for CSS/Less/Sass
+    \ 'coc-css',
+    " css modules intellisense
+    \ 'coc-cssmodules',
+    " for Dockerfile
+    "\ 'coc-docker',
+    " for hightlighting of color code
+    "\ 'coc-highlight', 
+    " for Html
+    \ 'coc-html',
+    " for Java, use eclipse.jdt.ls
+    "\ 'coc-java', 
+    " for Json
+    \ 'coc-json',
+    " snippets
+    \ 'coc-snippets', 
+    " A basic spell checker that works well with camelCase code
+    \ 'coc-spell-checker',
+    " for svelte (frontend something)
+    "\ 'coc-svelte',
+    " for Javascript/Typescript
+    \ 'coc-tsserver',
+    " for Vue, use vetur
+    "\ 'coc-vetur',
+    " for viml(= vim script?)
+    "\ 'coc-vimlsp',
+    " for xml, use lsp4xml
+    "\ 'coc-xml',
+    " for yaml
+    "\ 'coc-yaml',
+\ ]

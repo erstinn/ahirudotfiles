@@ -1,0 +1,36 @@
+{
+    "suggest.noselect": true,
+    "suggest.preferCompleteThanJumpPlaceholder":true,
+    "languageserver": {
+        "bash": {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"]
+        },
+        "clangd": {
+            "command": "clangd",
+            "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+            "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+        },
+        "cmake": {
+            "command": "cmake-language-server",
+            "filetypes": ["cmake"],
+            "rootPatterns": [
+              "build/"
+            ],
+            "initializationOptions": {
+              "buildDirectory": "build"
+            }
+        }
+        // note: this file is interpreted as JSONC (JSON with Comments),
+        // so I wrote comments for future use
+        // ---------- Extensions installed outside this file ----------
+        // (These extensions are recommended since LSP sever is not enough)
+        // - coc-css (CSS/Less/Sass)
+        // - coc-html (HTML)
+        // - coc-java (Java)
+        // - coc-tsserver (Javascript/Typescript)
+        // - coc-json (JSON)
+    },
+    "snippets.ultisnips.pythonPrompt": false
+}

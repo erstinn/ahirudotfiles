@@ -1,0 +1,49 @@
+# [[plugins]]
+# repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+hook_add = 'colorscheme onedark'
+
+[[plugins]]
+repo = 'preservim/nerdtree'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+merged = '0'
+rev = 'release'
+hook_add = '''exec 'source ~/.config/nvim/coc-extensions.vim' '''
+# use clangd&coc-clangd(one of coc extension) or just use coc-settings.json
+# this time, I'll use coc-settings.json
+#hook_add = '''
+#let g:coc_global_extensions = [
+#    \ 'coc-clangd',
+#    \ 'coc-cssmodules',
+#    \ 'coc-spell-checker',
+#    \ 'coc-snippets',
+#\ ]
+#'''
+
+[[plugins]]
+repo = 'rafi/awesome-vim-colorschemes'
+hook_add = 'colorscheme <color>'
+
+[[plugins]]
+repo = 'rose-pine/neovim'
+hook_add = 'colorscheme rose-pine-dawn'
+
+[[plugins]]
+repo = 'joshdick/onedark'
+hook_add = 'colorscheme onedark'
