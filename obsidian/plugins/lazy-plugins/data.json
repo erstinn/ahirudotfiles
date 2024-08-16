@@ -1,0 +1,89 @@
+{
+  "shortDelaySeconds": 5,
+  "longDelaySeconds": 15,
+  "defaultStartupType": null,
+  "plugins": {
+    "obsidian-admonition": {
+      "startupType": "instant"
+    },
+    "obsidian42-brat": {
+      "startupType": "instant"
+    },
+    "obsidian-checklist-plugin": {
+      "startupType": "instant"
+    },
+    "code-block-from-selection": {
+      "startupType": "instant"
+    },
+    "obsidian-copy-block-link": {
+      "startupType": "instant"
+    },
+    "editing-toolbar": {
+      "startupType": "instant"
+    },
+    "obsidian-excalidraw-plugin": {
+      "startupType": "instant"
+    },
+    "obsidian-git": {
+      "startupType": "instant"
+    },
+    "highlightr-plugin": {
+      "startupType": "instant"
+    },
+    "homepage": {
+      "startupType": "instant"
+    },
+    "obsidian-icon-folder": {
+      "startupType": "instant"
+    },
+    "obsidian-importer": {
+      "startupType": "instant"
+    },
+    "obsidian-linter": {
+      "startupType": "instant"
+    },
+    "make-md": {
+      "startupType": "disabled"
+    },
+    "obsidian-meta-bind-plugin": {
+      "startupType": "instant"
+    },
+    "obsidian-minimal-settings": {
+      "startupType": "instant"
+    },
+    "multi-column-markdown": {
+      "startupType": "instant"
+    },
+    "url-into-selection": {
+      "startupType": "instant"
+    },
+    "darlal-switcher-plus": {
+      "startupType": "instant"
+    },
+    "short-internal-links-to-headings": {
+      "startupType": "instant"
+    },
+    "obsidian-style-settings": {
+      "startupType": "instant"
+    },
+    "obsidian-tagfolder": {
+      "startupType": "disabled"
+    },
+    "obsidian-tasks-plugin": {
+      "startupType": "instant"
+    },
+    "obsidian-vimrc-support": {
+      "startupType": "instant"
+    },
+    "obsidian-banners": {
+      "startupType": "instant"
+    },
+    "dataview": {
+      "startupType": "instant"
+    },
+    "obsidian-snippet-downloader": {
+      "startupType": "instant"
+    }
+  },
+  "showConsoleLog": false
+}
