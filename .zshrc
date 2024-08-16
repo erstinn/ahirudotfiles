@@ -1,13 +1,18 @@
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-alias localip='ipconfig getifaddr en0' #gets local ip just for testing UI on phone :)
+alias localip='ipconfig getifaddr en0' 
 alias getups-branch='git rev-parse --abbrev-ref --symbolic-full-name @{u}' #get upstream of current branch
 alias getups-gen=''
 # general bash commands:
 alias ls='ls -a'
+# for simple dirs :-D 
+alias lsall='ls -Ra'
+alias LS='find . -type d -exec ls -ld {} \;'
 
+
+export PATH=~/.npm-global/bin:$PATH
+export TERM=xterm-256color
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -47,7 +52,7 @@ ZSH_THEME="alanpeabody"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -58,7 +63,7 @@ ZSH_THEME="alanpeabody"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -76,7 +81,8 @@ ZSH_THEME="alanpeabody"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git copybuffer zsh-autosuggestions history zsh-fzf-tab)
+plugins=(git copybuffer zsh-autosuggestions history)
+#fzf-tab if u want cooler tab autosuggest i dont
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,12 +130,44 @@ function clear-screen-and-scrollback() {
 zle -N clear-screen-and-scrollback
 bindkey '^L' clear-screen-and-scrollback
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=11,underline"
 
 # system variables
-export HISTIGNORE="clear:ls:pwd"
+export HISTIGNORE="clear:ls:pwd:cd:df"
 
 #use nvm: 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 export HISTSIZE=10000 
+
+source ~/Downloads/zshconf/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# make tab and shift tab to cycle autocomlpetes
+bindkey              '^I'         menu-complete
+bindkey "$terminfo[kcbt]" reverse-menu-complete
+	
+zstyle ':autocomplete:*' min-input 3
+zstyle ':autocomplete:*' delay 0.2  # seconds (float)
+zstyle -e ':autocomplete:*:*' list-lines 'reply=( $(( LINES / 3 )) )'
+# zstyle ':autocomplete:history-search-backward:*' list-lines 2
+
+# pnpm
+export PNPM_HOME="/Users/erin/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+#
+source $(brew --prefix nvm)/nvm.sh
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+# my stuff:
+webhere() {
+    open -a webstorm "${1:-.}"
+}
