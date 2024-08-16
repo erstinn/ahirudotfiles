@@ -1,0 +1,10 @@
+{
+  "theme": "moonstone",
+  "cssTheme": "AnuPpuccin",
+  "enabledCssSnippets": [
+    "MCL Gallery Cards",
+    "MCL Wide Views",
+    "MCL Multi Column",
+    "imagestuff"
+  ]
+}

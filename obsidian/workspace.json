@@ -1,0 +1,255 @@
+{
+  "main": {
+    "id": "8313fd97ef7d0f17",
+    "type": "split",
+    "children": [
+      {
+        "id": "422dc5ab3fc5967a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "066c4947727cbc2f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PR lol/JS env/TS 基本1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "72f687e036fa5538",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Does and do nots.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "78beed131195cdce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PR lol/Backend/Directus基本1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "da7d5377afe1f4fd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PR lol/Backend/Directus基本1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ff17d632bd6d2191",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Home.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d549423d95f307bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "6316aeaa73983b61",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "620629ed25afb337",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8381a21f7779e9d4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e764b9fc07c85ed6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 206
+  },
+  "right": {
+    "id": "f63624c8026a37ab",
+    "type": "split",
+    "children": [
+      {
+        "id": "73ba7925d77868a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b7c56f387e54dfa0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Home.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b68f52c4e23388b4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Home.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "149e430e43cb4b6b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "cc27e985169d8878",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Home.md"
+              }
+            }
+          },
+          {
+            "id": "4f3041d33cba311a",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian42-brat:BRAT": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "workspaces:Manage workspace layouts": false,
+      "zk-prefixer:Create new unique note": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-importer:Open Importer": false,
+      "homepage:Open homepage": false
+    }
+  },
+  "active": "ff17d632bd6d2191",
+  "lastOpenFiles": [
+    "Does and do nots.md",
+    "Home.md",
+    "PR lol/Frameworks/Astro基本1.md",
+    "PR lol/Frameworks/Angular基本2.md",
+    "PR lol/Frameworks/Angular基本1.md",
+    "PR lol/HTML CSS/HTML CSS基本3.md",
+    "PR lol/HTML CSS/HTML CSS基本1.md",
+    "PR lol/HTML CSS/HTML CSS基本2.md",
+    "PR lol/JS env/TS 基本3.md",
+    "PR lol/JS env/TS 基本2.md",
+    "PR lol/JS env/TS 基本1.md",
+    "PR lol/JS env/JS 基本2.md",
+    "PR lol/Backend/Directus基本3.md",
+    "PR lol/Backend/Directus基本2.md",
+    "PR lol/Frameworks/Storybook + Angular基本3.md",
+    "PR lol/Frameworks/Storybook + Angular基本2.md",
+    "PR lol/Frameworks/Storybook + Angular基本1.md",
+    "PR lol/Frameworks/Angular基本3.md",
+    "PR lol/Frameworks/Astro基本3.md",
+    "PR lol/Frameworks/Astro基本2.md",
+    "PR lol/JS env/JS 基本3.md",
+    "PR lol/JS env/JS 基本1.md",
+    "会議とか/2.19.md",
+    "PR lol/Backend/Directus基本1.md",
+    "PR lol/Backend",
+    "PR lol/Frameworks",
+    "PR lol/HTML CSS",
+    "PR lol/JS env",
+    "PR lol/JS env/TS 中級.md",
+    "会議とか/DevCycle flow.md",
+    "Pasted image 20240816101919.png",
+    "PR lol",
+    "やることリスト",
+    "会議とか",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "Excalidraw"
+  ]
+}
