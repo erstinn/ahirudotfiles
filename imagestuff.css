@@ -1,0 +1,10 @@
+/* obsidian */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div[data-path$='.png']{
+	display: none;
+}
