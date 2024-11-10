@@ -1,0 +1,228 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Path to your oh-my-zsh installation.
+export ZSH="/usr/share/oh-my-zsh"
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH="$HOME/cute-scripts:$PATH"
+export NVM_LAZY_LOAD=true
+setopt EXTENDED_HISTORY # allow `history` to be recorded to .zsh_history 
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE # Do not record an event starting with a space.
+setopt SHARE_HISTORY # share history between sessions
+setopt INC_APPEND_HISTORY # immediate record instead of when session closed
+unsetopt CORRECT
+
+alias worktree="nocorrect worktree"
+alias localip='ipconfig getifaddr en0' 
+alias getups-branch='git rev-parse --abbrev-ref --symbolic-full-name @{u}' #get upstream of current branch
+alias getups-gen=''
+# general bash commands:
+alias ls='ls -a'
+# for simple dirs :-D 
+alias lsall='ls -Ra'
+alias LS='find . -type d -exec ls -ld {} \;'
+alias gconf='git config --list --show-origin'
+
+
+export PATH=~/.npm-global/bin:$PATH
+export TERM=xterm-256color
+
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/
+source $ZSH/oh-my-zsh.sh
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+#
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+HIST_STAMPS="%Y-%m-%d %H:%M"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+#fzf-tab if u want cooler tab autosuggest i dont
+# plugins=(git copybuffer zsh-autosuggestions history)
+plugins=(zsh-autosuggestions history)
+
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+# MY OWN CONF:
+
+# binds ctrl l to clear command
+function clear-screen-and-scrollback() {
+  builtin echoti civis >"$TTY"
+  builtin print -rn -- $'\e[H\e[2J' >"$TTY"
+  builtin zle .reset-prompt
+  builtin zle -R
+  builtin print -rn -- $'\e[3J' >"$TTY"
+  builtin echoti cnorm >"$TTY"
+}
+
+zle -N clear-screen-and-scrollback
+bindkey '^L' clear-screen-and-scrollback
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=11,underline"
+
+# system variables
+export HISTIGNORE="clear:ls:pwd:cd:df"
+HISTORY_IGNORE="(ls|cd|pwd|exit|cd ..)"
+
+#use nvm: 
+#export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+export HISTSIZE=9000
+
+# Load Angular CLI autocompletion.
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source <(ng completion script)
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# make tab and shift tab to cycle autocomlpetes
+bindkey              '^I'         menu-complete
+bindkey "$terminfo[kcbt]" reverse-menu-complete
+	
+zstyle ':autocomplete:*' min-input 3
+zstyle ':autocomplete:*' delay 0.2  # seconds (float)
+zstyle -e ':autocomplete:*:*' list-lines 'reply=( $(( LINES / 3 )) )'
+# zstyle ':autocomplete:history-search-backward:*' list-lines 2
+
+# pnpm
+export PNPM_HOME="/Users/erin/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+# my stuff:
+gohere() {
+    open -a goland "${1:-.}"
+}
+
+ls-sym() {
+    echo -e "\033[38;5;13mNOTE:\033[0m recurses from current dir to subdirs"
+        find . -type l -not -path "*/node_modules/*" -exec sh -c 'echo "{} -> $(readlink -f "{}")"' \;
+}
+
+get_envs() {
+
+}
+
+#TODO can u add comments i dont understand myself
+findpt() {
+    local folder
+    local pattern
+
+    # If two arguments are provided
+    if [ "$#" -eq 2 ]; then
+        folder="$1"
+        pattern="$2"
+    # If only one argument is provided
+    elif [ "$#" -eq 1 ]; then
+        folder="."
+        pattern="$1"
+    else
+        echo "Usage: fuzzy_find [<path_to_folder>] <file_pattern>"
+        return 1
+    fi
+
+    # Run find with the folder and pattern and pipe into fzf
+    find "$folder" -type f -name "$pattern" | fzf
+}
+# END OF MY STUFF
+
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme 
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
